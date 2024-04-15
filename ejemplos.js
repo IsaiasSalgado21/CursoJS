@@ -20,8 +20,8 @@ console.log("hola mundo")
 // var es para variables globales(mala practica)y let se usa en el ambito de bloque
  
 /* podemos usar constantes para declarar objetos o arreglos, y tambien datos primitivos, pero estos
-no pueden cambiar su valor por ser constante
-*/
+no pueden cambiar su valor por ser constante*/
+
 
 //cadenas de texto, strings
 
