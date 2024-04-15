@@ -13,3 +13,6 @@ console.log(indefinida)
 //null es un valor especial que indica la ausencia de un valor
 let nulo= null
 console.log(nulo)
+//NaN - Not a Number
+let noSoyUnNumero= "hola"*5
+console.log(noSoyUnNumero)
