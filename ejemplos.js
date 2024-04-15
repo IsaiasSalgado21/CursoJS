@@ -52,4 +52,6 @@ let comida = "tacos"
 //concatenacion
 let gustos = "me gusta practicar: "+ deporte + " y mi comida favorita es: " +comida + "."
 console.log(gustos) 
-
+//template string, aqui hacemos uso la interpolacion con nombre y apellido
+let gustos2 = `hola mi nombre es ${nombre} ${apellido}`
+console.log(gustos2)
