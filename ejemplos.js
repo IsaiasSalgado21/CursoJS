@@ -31,7 +31,25 @@ let saludo = "hola mundo"
 
 console.log(nombre, apellido, saludo)
 console.log(
+    //con length nos da el numero de caracteres de nuestro string 
     nombre.length,
     apellido.length,
-    saludo.length
+    saludo.length,
+    //aqui llamamos el metodo toLocaleUpperCase para mostrarlo en mayusculas
+    nombre.toLocaleUpperCase(),
+    //aqui llamamos al metodo para mostrarlas en minusculas
+    apellido.toLocaleLowerCase(),
+    //con includes busca si se incluye la cadena que agreguemos en las dobles comillas
+    saludo.includes("hola mundo"),
+    // con trim eliminamos los espacios del inicio y el final de nuestro string
+    saludo.trim(),
+    //con split separamos el string con el caracarter que le hayamos colocado entre comillasn es este caso el espacio
+    saludo.split(" ")
 )
+
+let deporte = "basquetball"
+let comida = "tacos"
+//concatenacion
+let gustos = "me gusta practicar: "+ deporte + " y mi comida favorita es: " +comida + "."
+console.log(gustos) 
+
