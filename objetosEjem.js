@@ -14,7 +14,7 @@ const objetoEjem = {
     saludo:function(){
         console.log("Hola mundo")
     },
-    presentacion:function(){//usamos this para obtener el valor de nuestro atributo nombre, apellido y edad
+    presentacion:function(){//usamos this para obtener de nuestro objeto el valor de su atributo nombre, apellido y edad
         console.log(`Hola me llamo ${this.nombre} ${this.apellido} y tengo ${this.edad} años y mi numero es:${this.contacto.numTelefono}`)
     }
 }
