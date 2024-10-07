@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+        13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+        14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.*/
+
+        function esPrimo(numero){
+            if(numero < 2) return false //validamos que no sea menor que dos, por que los numeros menores a 2 no son primos
+            
+            for(let i = 2; i <= Math.sqrt(numero); i++){
+                if(numero % i === 0){
+                    return false;// si es divisible por i, no es primo
+                }
+            }
+            return true; // si no se encontraron divisores, es primo
+        }
+        console.log(esPrimo(7));
+        console.log(esPrimo(4));
+
+        function parImpar(numero){
+            return (numero % 2 === 0) ? "par": "impar";
+        }
+        console.log(parImpar(29));
+        console.log(parImpar(4));
+
+
+        function convertirGrados(grados, tipo){
+            if(tipo === "C"){
+                return(grados * 9/5) + 32 + "°F";
+            }else if(tipo === "F"){
+                return((grados - 32)* 5/9).toFixed(2)+ "°C";
+            }else{
+                return "Tipo de conversion no valido";
+            }
+        }
+
+        console.log(convertirGrados(0, "C"));
+        console.log(convertirGrados(32, "F"))
+    </script>
+</body>
+</html>
