@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        15) Programa una función para convertir números de base binaria a decimal y viceversa,
+         pe. miFuncion(100,2) devolverá 4 base 10.
+        16) Programa una función que devuelva el monto final después de aplicar un descuento
+         a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
+        17)  Programa una función que dada una fecha válida determine cuantos años han pasado
+         hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+        */
+
+        function convertirNumero(numero, base){
+            if(base === 2){
+                return parseInt(numero, 2);//con parseInt convertimos de decimal a binario
+            }else if(base===10){
+                return numero.toString(2);
+            }else{
+                return "base no soportada";
+            }
+        }
+        console.log(convertirNumero(100, 2));
+        console.log(convertirNumero(4, 10));
+
+        function aplicarDescuento(cantidad, descuento){
+            return cantidad - (cantidad * (descuento/100))
+        }
+
+        console.log(aplicarDescuento(1000, 20));
+
+        function calcularAnios(fecha) {
+            const hoy = new Date();
+            const anios = hoy.getFullYear() - fecha.getFullYear();
+            
+            const cumpleanosEsteAnio = new Date(hoy.getFullYear(), fecha.getMonth(), fecha.getDate());
+            
+            return (hoy >= cumpleanosEsteAnio) ? anios : anios - 1;
+            }
+            console.log(calcularAnios(new Date(1984, 4, 23)));
+
+    </script>
+</body>
+</html>
