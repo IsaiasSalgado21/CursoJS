@@ -11,6 +11,14 @@
         19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
         20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.*/
 
+
+        function contarVocalesConsonantes(texto) {
+        const vocales = texto.match(/[aeiouáéíóúü]/gi) || [];
+        const consonantes = texto.match(/[bcdfghjklmnpqrstvwxyz]/gi) || [];
+        return `Vocales: ${vocales.length}, Consonantes: ${consonantes.length}`;
+        }
+        console.log(contarVocalesConsonantes("Hola Mundo"));
+
         function validarNombre(nombre){
             return /^[a-zA-Z\s]+$/.test(nombre);
         }
@@ -19,7 +27,8 @@
         function validarEmail(email) {
         return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email);
         }
-        console.log(validarEmail("jonmircha@gmail.com")); 
+        console.log(validarEmail("jonmircha@gmail.com"));
+         
     </script>
 </body>
 </html>
